@@ -1,0 +1,542 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="SampleData\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="SampleData\albt.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778001.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777839.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777842.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777851.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777888.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777900.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777903.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777908.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777944.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777957.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777964.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777968.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778005.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778017.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778242.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778256.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778259.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\apol.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778265.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cern.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777861.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cern.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777923.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cern.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777981.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cern.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778279.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777867.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777872.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777876.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777881.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777882.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777885.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777889.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777890.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777902.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777905.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777913.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777915.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777917.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777919.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777921.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777935.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777942.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777946.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777949.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777950.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777954.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777955.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777961.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777976.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777977.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777980.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778015.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778016.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778261.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778262.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778268.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778271.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778273.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778275.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778284.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778289.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\cvs\cvs.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777867.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777859.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777862.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777866.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777871.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777893.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777897.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777920.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777926.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777930.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777933.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777947.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777951.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777979.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777982.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777986.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777990.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778010.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778013.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778228.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778249.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778252.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778277.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778280.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778286.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\eclaim.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778290.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\enss.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777868.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\enss.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777887.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\enss.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777909.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\enss.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777932.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\enss.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777965.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\enss.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777966.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\enss.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778267.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\enss.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778283.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\Gary\Walmart.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\meij.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777997.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\omni.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777836.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\omni.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777853.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\omni.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777898.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\omni.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777914.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\omni.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777953.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\omni.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777971.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\omni.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778014.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\omni.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778241.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\omni.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778255.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777863.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777869.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777874.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777879.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777883.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777886.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777892.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777895.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777899.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777901.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777904.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777907.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777912.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777918.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777922.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777931.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777934.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777938.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777939.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777945.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777948.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777952.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777960.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777963.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777967.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777969.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777970.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777975.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777978.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777984.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778012.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778218.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778223.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778229.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778234.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778239.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778244.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778251.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778253.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778257.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778260.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778263.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778266.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778269.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778272.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778278.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778282.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walgreen.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778288.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777849.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777855.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777873.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777877.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777880.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777891.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777906.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777910.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777911.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777924.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777941.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777943.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777956.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777958.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777972.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38777974.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778000.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778008.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778009.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778250.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778254.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778258.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778264.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleData\walmart.576bfca0-52fa-4036-9f8e-a732b90eaf1e-38778287.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

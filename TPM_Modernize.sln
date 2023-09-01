@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPNS_Simulator", "HPNS_Simulator\HPNS_Simulator.csproj", "{4CCA5462-DE2F-4874-ADF2-E851F53186BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCP_Client", "TCP_Client\TCP_Client.csproj", "{5941B410-3E8C-4A90-A73D-1121C7A5E579}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiveMessage", "ReceiveMessage\ReceiveMessage.csproj", "{AB53C5E4-7183-4224-B0F1-12B247919B59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CCA5462-DE2F-4874-ADF2-E851F53186BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CCA5462-DE2F-4874-ADF2-E851F53186BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CCA5462-DE2F-4874-ADF2-E851F53186BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CCA5462-DE2F-4874-ADF2-E851F53186BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5941B410-3E8C-4A90-A73D-1121C7A5E579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5941B410-3E8C-4A90-A73D-1121C7A5E579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5941B410-3E8C-4A90-A73D-1121C7A5E579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5941B410-3E8C-4A90-A73D-1121C7A5E579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB53C5E4-7183-4224-B0F1-12B247919B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB53C5E4-7183-4224-B0F1-12B247919B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB53C5E4-7183-4224-B0F1-12B247919B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB53C5E4-7183-4224-B0F1-12B247919B59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9BB8E75F-6AC7-4FE7-8B0E-149BA6A34E33}
+	EndGlobalSection
+EndGlobal

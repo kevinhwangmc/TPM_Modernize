@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TCP_Client": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "C:\\Users\\e5jnvaq\\Downloads\\rtdf_json.json"
+      }
+    }
+  }
+}
