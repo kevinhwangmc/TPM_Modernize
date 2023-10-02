@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HPNS_Simulator", "HPNS_Simu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCP_Client", "TCP_Client\TCP_Client.csproj", "{5941B410-3E8C-4A90-A73D-1121C7A5E579}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiveMessage", "ReceiveMessage\ReceiveMessage.csproj", "{AB53C5E4-7183-4224-B0F1-12B247919B59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiveMessage", "ReceiveMessage\ReceiveMessage.csproj", "{AB53C5E4-7183-4224-B0F1-12B247919B59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPNSDataGenerator", "HPNSDataGenerator\HPNSDataGenerator.csproj", "{F10CD70C-3D2C-4DD3-AC82-A48517AE0E1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{AB53C5E4-7183-4224-B0F1-12B247919B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB53C5E4-7183-4224-B0F1-12B247919B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB53C5E4-7183-4224-B0F1-12B247919B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F10CD70C-3D2C-4DD3-AC82-A48517AE0E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F10CD70C-3D2C-4DD3-AC82-A48517AE0E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F10CD70C-3D2C-4DD3-AC82-A48517AE0E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F10CD70C-3D2C-4DD3-AC82-A48517AE0E1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
