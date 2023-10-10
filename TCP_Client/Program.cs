@@ -9,7 +9,8 @@ new Thread(() =>
     Thread.CurrentThread.IsBackground = true;
     //Connect("172.20.10.2", "Hello I'm Device 1...");
     //Connect("192.168.1.73", "Hello I'm Device 1...");
-    Connect("192.168.1.6", "Hello I'm Device 1...");
+    //Connect("192.168.1.6", "Hello I'm Device 1...");
+    Connect("192.168.219.112", "Hello I'm Device 1...");
 }).Start();
 
 //new Thread(() =>
