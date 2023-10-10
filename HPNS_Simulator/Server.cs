@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HPNSDataGenerator;
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Security.Cryptography.X509Certificates;
@@ -37,7 +38,26 @@ class Server
         }
     }
 
+
     public void HandleDeivce(Object obj)
+    {
+        DataPacketWrapper data = new DataPacketWrapper();
+        var dd = data.GetBytes();
+
+        TcpClient client = (TcpClient)obj;
+        var stream = client.GetStream();
+        try
+        {
+            stream.Write(dd, 0, dd.Length);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Exception: {0}", e.ToString());
+            client.Close();
+        }
+    }
+
+    public void HandleDeivce1(Object obj)
     {
         TcpClient client = (TcpClient)obj;
         var stream = client.GetStream();
