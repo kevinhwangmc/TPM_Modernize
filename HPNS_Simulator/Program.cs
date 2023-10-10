@@ -1,8 +1,5 @@
 ﻿
-using HPNSDataGenerator;
 
-var dd = new DataPacketWrapper();
-var bytes = dd.GetBytes();
 
 Thread t = new Thread(delegate ()
 {
