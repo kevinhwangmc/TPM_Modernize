@@ -81,5 +81,73 @@ namespace HPNSDataGenerator.util
 
             return newArray;
         }
+
+        public static long GetLongLE(byte[] buffer, int startIndex, int count)
+        {
+            long result = 0;
+            long multiplier = 1;
+            for (int i = 0; i < count; i++)
+            {
+                result += buffer[startIndex + i] * multiplier;
+                multiplier *= 256;
+            }
+            return result;
+        }
+
+        public static long GetLongBE(byte[] buffer, int startIndex, int count)
+        {
+            Array.Reverse(buffer);
+            long result = 0;
+            long multiplier = 1;
+            for (int i = 0; i < count; i++)
+            {
+                result += buffer[startIndex + i] * multiplier;
+                multiplier *= 256;
+            }
+            return result;
+        }
+
+        public static long GetTickTimeStamp()
+        {
+            //return DateTime.Now.Ticks;
+            DateTime currentTime = DateTime.UtcNow;
+            return ((DateTimeOffset)currentTime).ToUnixTimeSeconds();
+        }
+
+        public static byte[] GetByteLastTransaction(byte[] trans)
+        {
+            byte[] newArray = new byte[trans.Length - 1];
+            Buffer.BlockCopy(trans, 0, newArray, 0, newArray.Length);
+
+            return newArray;
+        }
+
+        public static byte[] GetByteTimeStamp()
+        {
+            var temp = BitConverter.GetBytes(GetTickTimeStamp()); //remove last two bytes
+            byte[] newArray = new byte[temp.Length - 2];
+            Buffer.BlockCopy(temp, 0, newArray, 0, newArray.Length);
+
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(newArray);
+                return newArray;
+            }
+            else
+                return newArray;
+            //unix byte Int32 ==> 12345345 Big Endian
+            //11111111 11111111 11111111 00000000
+            //255 * 256*256*256
+
+            //window byte Int32 ==> 12345345
+            //00000000 11111111 11111111 11111111 ==> Little Endian
+            //BitConverter.ToSingle(bytes, 0);
+        }
+
+
+        //arrProp = 
+        //BitConverter.ToInt64(arrProp, 0)
+
+        //long milliseconds = GetLongLE(timestamp, 0, 6);
     }
 }
