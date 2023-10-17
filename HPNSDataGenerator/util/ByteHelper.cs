@@ -72,7 +72,7 @@ namespace HPNSDataGenerator.util
             return ret;
         }
 
-        public static byte[] GetRejectCode(string rejectCode)
+        public static byte[] GetByteRejectCode(string rejectCode)
         {
             byte[] rejectByte = Encoding.ASCII.GetBytes(rejectCode);
             var newArray = new byte[3];

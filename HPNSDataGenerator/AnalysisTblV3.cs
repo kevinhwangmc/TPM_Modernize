@@ -16,11 +16,11 @@ namespace HPNSDataGenerator
                 VersionCode = "D0";
 
             Random rnd = new Random();
+
             if (isF6) // 8 digit numbers for F6
-                BIN = rnd.Next(10000000, 99999999);
+                BIN = Convert.ToInt32(lstBin[rnd.Next(856)]) * 100;
             else
                 BIN = Convert.ToInt32(lstBin[rnd.Next(856)]);
-
 
             RejectCode = lstRejectCode[rnd.Next(1421)];
             TransCode = lstTransCode[rnd.Next(17)];
@@ -37,7 +37,7 @@ namespace HPNSDataGenerator
                 ByteHelper.GetByteInt(RespTime),
                 ByteHelper.GetByteString(VersionCode),
                 ByteHelper.GetByteString(TransCode),
-                ByteHelper.GetRejectCode(RejectCode),
+                ByteHelper.GetByteRejectCode(RejectCode),
                 ByteHelper.GetByteString(PCN)
             };
             return ByteHelper.Combine(bytes);
