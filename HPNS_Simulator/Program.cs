@@ -1,5 +1,7 @@
 ﻿
+using HPNSDataGenerator.util;
 
+ByteHelper.GetIPAddr();
 
 Thread t = new Thread(delegate ()
 {
@@ -7,8 +9,10 @@ Thread t = new Thread(delegate ()
     //Server myserver = new Server("172.20.10.2", 13000);
     //Server myserver = new Server("192.168.1.73", 13000);
     //Server myserver = new Server("192.168.1.6", 13000);
-    Server myserver = new Server("192.168.219.112", 13000);
-    
+    //Server myserver = new Server("192.168.219.112", 13000);
+    //vpn 10.24.15.210
+    Server myserver = new Server("10.24.15.210", 13000);
+
 });
 t.Start();
 

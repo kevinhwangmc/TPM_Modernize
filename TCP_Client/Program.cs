@@ -10,7 +10,9 @@ new Thread(() =>
     //Connect("172.20.10.2", "Hello I'm Device 1...");
     //Connect("192.168.1.73", "Hello I'm Device 1...");
     //Connect("192.168.1.6", "Hello I'm Device 1...");
-    Connect("192.168.219.112", "Hello I'm Device 1...");
+    //Connect("192.168.219.112", "Hello I'm Device 1...");
+
+    Connect("10.24.15.210", "Hello I'm Device 1...");
 }).Start();
 
 //new Thread(() =>
@@ -31,9 +33,9 @@ static async void Connect(String server, String message)
 
         NetworkStream stream = client.GetStream();
 
-        int count = 0;
-        while (count++ < 10)
-        {
+        //int count = 0;
+        //while (count++ < 100)
+        //{
             // Translate the Message into ASCII.
             Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
 
@@ -63,11 +65,11 @@ static async void Connect(String server, String message)
 
             //Feed byte array into PUB/SUB
 
-            Thread.Sleep(2000);
-        }
+            //Thread.Sleep(2000);
+        //}
 
-        stream.Close();
-        client.Close();
+        //stream.Close();
+        //client.Close();
     }
     catch (Exception e)
     {

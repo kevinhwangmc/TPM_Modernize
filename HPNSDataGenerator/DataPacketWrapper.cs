@@ -5,11 +5,17 @@ using System.Security.Cryptography;
 namespace HPNSDataGenerator
 {
     [Serializable]
-    public class DataPacketWrapper
+    public class DataPacketWrapper : IDisposable
     {
-        public DataPacketWrapper()
+        public DataPacketWrapper(bool isF6)
         {
-            Data = new AnalysisData();
+            Data = new AnalysisData(isF6);
+        }
+
+        ~DataPacketWrapper()
+        {
+            Array.Clear(Data.AnalysisTbl);
+            Dispose(false);
         }
         public byte[] GetBytes()
         {
@@ -24,6 +30,37 @@ namespace HPNSDataGenerator
             };
 
             return ByteHelper.Combine(lstData.ToArray());
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                // free managed resources
+                ReleaseManagedResources();
+            }
+            // free native resources if there are any.
+            ReleaseUnmangedResources();
+        }
+        void ReleaseManagedResources()
+        {
+            //Console.WriteLine("Releasing Managed Resources");
+            //if (Data != null)
+            //{
+            //    Data.Dispose();
+            //}
+        }
+
+        void ReleaseUnmangedResources()
+        {
+            Array.Clear(Data.AnalysisTbl);
+            //Console.WriteLine("Releasing Unmanaged Resources");
         }
 
         public byte[] STX { get; set; } = { 0x02 };

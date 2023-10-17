@@ -41,14 +41,22 @@ class Server
 
     public void HandleDeivce(Object obj)
     {
-        DataPacketWrapper data = new DataPacketWrapper();
-        var dd = data.GetBytes();
-
         TcpClient client = (TcpClient)obj;
         var stream = client.GetStream();
+
+        Random rnd = new Random();
+
         try
         {
-            stream.Write(dd, 0, dd.Length);
+            while(true)
+            {
+                var randomBool = rnd.Next(0, 2) > 0;
+                var data = new DataPacketWrapper(randomBool);
+                var bytes = data.GetBytes();
+                stream.Write(bytes, 0, bytes.Length);
+                data.Dispose();
+                Thread.Sleep(rnd.Next(1000, 10000));
+            }
         }
         catch (Exception e)
         {

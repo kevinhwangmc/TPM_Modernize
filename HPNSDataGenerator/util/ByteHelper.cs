@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
@@ -122,6 +123,40 @@ namespace HPNSDataGenerator.util
             return newArray;
         }
 
+        public static List<string> GetCVSBIN()
+        {
+            var lstBin = new List<string>();
+            string folderPath = @"SampleFiles\cvs_bin.txt";
+            string[] lines = File.ReadAllLines(folderPath);
+
+            foreach (string line in lines)
+                lstBin.Add(line);
+
+            return lstBin;
+        }
+
+        public static List<string> GetRejectCode()
+        {
+            var lstRejectCode = new List<string>();
+            string folderPath = @"SampleFiles\reject_code.txt";
+            string[] lines = File.ReadAllLines(folderPath);
+
+            foreach (string line in lines)
+                lstRejectCode.Add(line);
+
+            return lstRejectCode;
+        }
+        public static List<string> GetTransCode()
+        {
+            var lstTransCode = new List<string>();
+            string folderPath = @"SampleFiles\transaction_code.txt";
+            string[] lines = File.ReadAllLines(folderPath);
+
+            foreach (string line in lines)
+                lstTransCode.Add(line);
+
+            return lstTransCode;
+        }
         public static byte[] GetByteTimeStamp()
         {
             var temp = BitConverter.GetBytes(GetTickTimeStamp()); //remove last two bytes
@@ -144,7 +179,23 @@ namespace HPNSDataGenerator.util
             //BitConverter.ToSingle(bytes, 0);
         }
 
+        public static void GetIPAddr()
+        {
+            String strHostName = string.Empty;
+            // Getting Ip address of local machine...
+            // First get the host name of local machine.
+            strHostName = Dns.GetHostName();
+            Console.WriteLine("Local Machine's Host Name: " + strHostName);
+            // Then using host name, get the IP address list..
+            IPHostEntry ipEntry = Dns.GetHostEntry(strHostName);
+            IPAddress[] addr = ipEntry.AddressList;
 
+            for (int i = 0; i < addr.Length; i++)
+            {
+                Console.WriteLine("IP Address {0}: {1} ", i, addr[i].ToString());
+            }
+            Console.ReadLine();
+        }
         //arrProp = 
         //BitConverter.ToInt64(arrProp, 0)
 

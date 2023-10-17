@@ -5,11 +5,16 @@ namespace HPNSDataGenerator
     [Serializable]
     public class AnalysisData
     {
-        public AnalysisData()
+        public AnalysisData(bool isF6)
         {
+            var rnd = new Random();
+
+            StartEntry = Convert.ToInt16(rnd.Next(0, 749));
+            EndEntry = Convert.ToInt16(rnd.Next(0, 749));
+
             var lstData = new List<AnalysisTblV3>();
             for(int i = 0; i < 750; i++)
-                lstData.Add(new AnalysisTblV3());
+                lstData.Add(new AnalysisTblV3(isF6));
 
             AnalysisTbl = lstData.ToArray();
         }
@@ -54,9 +59,6 @@ namespace HPNSDataGenerator
             lstData.Add(ByteHelper.GetByteInt(MaxConnections));
             lstData.Add(ByteHelper.GetByteInt(HostPort));
 
-            //foreach (var data in AnalysisTbl)
-            //    lstData.Add(data.GetBytes());
-
             //For loop - last transaction should be loaded 19 bytes for HPNS bug.
             for (int i = 0; i < AnalysisTbl.Length; i++)
             {
@@ -69,12 +71,12 @@ namespace HPNSDataGenerator
         }
 
         public string RecType { get; set; } = "ZX";
-        public string CommandStr { get; set; } = "18APOL";
+        public string CommandStr { get; set; } = "18CVS-";
         public short Sid { get; set; } = 6975;
         public string HeaderVersion { get; set; } = "V3";
         public short SystemNum { get; set; } = 0;
-        public short StartEntry { get; set; } = 108;
-        public short EndEntry { get; set; } = 63;
+        public short StartEntry { get; set; }
+        public short EndEntry { get; set; }
         public short[] CurrentTime { get; set; } = new short[8];
         public short[] TimeStamp { get; set;} = new short[3];
         public short CurrentConnections { get; set; } = 22;

@@ -5,6 +5,29 @@ namespace HPNSDataGenerator
     [Serializable]
     public class AnalysisTblV3
     {
+        public AnalysisTblV3(bool isF6)
+        {
+            var lstBin = ByteHelper.GetCVSBIN();
+            var lstRejectCode = ByteHelper.GetRejectCode();
+            var lstTransCode = ByteHelper.GetTransCode();
+            if (isF6)
+                VersionCode = "F6";
+            else
+                VersionCode = "D0";
+
+            Random rnd = new Random();
+            if (isF6) // 8 digit numbers for F6
+                BIN = rnd.Next(10000000, 99999999);
+            else
+                BIN = Convert.ToInt32(lstBin[rnd.Next(856)]);
+
+
+            RejectCode = lstRejectCode[rnd.Next(1421)];
+            TransCode = lstTransCode[rnd.Next(17)];
+            RespTime = Convert.ToInt16(rnd.Next(500));
+            DateTime currentTime = DateTime.UtcNow;
+            RecvTime = Convert.ToInt32(((DateTimeOffset)currentTime).ToUnixTimeSeconds());
+        }
         public byte[] GetBytes()
         {
             byte[][] bytes =
@@ -19,12 +42,12 @@ namespace HPNSDataGenerator
             };
             return ByteHelper.Combine(bytes);
         }
-        public int BIN { get; set; } = 5947;
-        public int RecvTime { get; set; } = 1517633343;
-        public short RespTime { get; set; } = 12;
-        public string VersionCode { get; set; } = "D0";
-        public string TransCode { get; set; } = "B2";
-        public string RejectCode { get; set; } = "87"; // 3 bytes
+        public int BIN { get; set; }
+        public int RecvTime { get; set; }
+        public short RespTime { get; set; }
+        public string VersionCode { get; set; }
+        public string TransCode { get; set; }
+        public string RejectCode { get; set; }
         public string PCN { get; set; } = "CLA";
     }
 
