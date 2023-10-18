@@ -1,9 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using HPNSDataGenerator.util;
 using System.Net.Sockets;
 using System.Text;
 using TCP_Client;
 using static Google.Rpc.Context.AttributeContext.Types;
 
+var ipaddr = ByteHelper.GetIPAddr();
 new Thread(() =>
 {
     Thread.CurrentThread.IsBackground = true;
@@ -12,7 +14,7 @@ new Thread(() =>
     //Connect("192.168.1.6", "Hello I'm Device 1...");
     //Connect("192.168.219.112", "Hello I'm Device 1...");
 
-    Connect("10.24.15.210", "Hello I'm Device 1...");
+    Connect(ipaddr, "Hello I'm Device 1...");
 }).Start();
 
 //new Thread(() =>
@@ -50,9 +52,9 @@ static async void Connect(String server, String message)
             // Read the Tcp Server Response Bytes.
             Int32 bytes = stream.Read(data, 0, data.Length);
 
-            PubSubCls pubSub = new();
+            //PubSubCls pubSub = new();
             //await pubSub.PublishMessageWithCustomAttributesAsync("g-npe-prj-rhmod-dev", "test-tpm", ByteArrayToString(data));
-            await pubSub.PublishMessageWithCustomAttributesAsync("g-npe-prj-rhmod-dev", "test-tpm", data);
+            //await pubSub.PublishMessageWithCustomAttributesAsync("g-npe-prj-rhmod-dev", "test-tpm", data);
 
             //PublishMessagesAsyncSample pubsub2 = new();
             //await pubsub2.PublishMessagesAsync("g-npe-prj-rhmod-dev", "test-tpm", data);

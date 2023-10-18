@@ -179,7 +179,7 @@ namespace HPNSDataGenerator.util
             //BitConverter.ToSingle(bytes, 0);
         }
 
-        public static void GetIPAddr()
+        public static string GetIPAddr()
         {
             String strHostName = string.Empty;
             // Getting Ip address of local machine...
@@ -190,11 +190,13 @@ namespace HPNSDataGenerator.util
             IPHostEntry ipEntry = Dns.GetHostEntry(strHostName);
             IPAddress[] addr = ipEntry.AddressList;
 
+            string rightIP = "";
             for (int i = 0; i < addr.Length; i++)
             {
-                Console.WriteLine("IP Address {0}: {1} ", i, addr[i].ToString());
+                if (addr[i].ToString().StartsWith("192.168") || addr[i].ToString().StartsWith("10.24"))
+                    rightIP = addr[i].ToString();
             }
-            Console.ReadLine();
+            return rightIP;
         }
         //arrProp = 
         //BitConverter.ToInt64(arrProp, 0)
