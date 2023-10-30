@@ -10,6 +10,13 @@ namespace HPNSDataGenerator.util
 {
     public class ByteHelper
     {
+        public enum BinMode
+        {
+            NoF6,
+            Mixed,
+            F6Only
+        }
+
         public static byte[] ObjectToByteArray(Object obj)
         {
             BinaryFormatter bf = new BinaryFormatter();

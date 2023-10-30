@@ -1,5 +1,6 @@
 ﻿using HPNSDataGenerator;
 using System;
+using System.Configuration;
 using System.Net;
 using System.Net.Sockets;
 using System.Security.Cryptography.X509Certificates;
@@ -45,14 +46,13 @@ class Server
         var stream = client.GetStream();
 
         Random rnd = new Random();
-
+        
         try
         {
-            while(true)
+            string binMode = ConfigurationManager.AppSettings["BINMODE"];
+            while (true)
             {
-                var randomBool = rnd.Next(0, 2) > 0;
-                //var data = new DataPacketWrapper(randomBool);
-                var data = new DataPacketWrapper(false);
+                var data = new DataPacketWrapper(Convert.ToInt32(binMode));
                 var bytes = data.GetBytes();
                 stream.Write(bytes, 0, bytes.Length);
                 data.Dispose();

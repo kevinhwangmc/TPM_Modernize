@@ -1,15 +1,16 @@
 ﻿using HPNSDataGenerator.util;
 using System.Security.AccessControl;
 using System.Security.Cryptography;
+using static HPNSDataGenerator.util.ByteHelper;
 
 namespace HPNSDataGenerator
 {
     [Serializable]
     public class DataPacketWrapper : IDisposable
     {
-        public DataPacketWrapper(bool isF6)
+        public DataPacketWrapper(int binMode)
         {
-            Data = new AnalysisData(isF6);
+            Data = new AnalysisData((BinMode)binMode);
         }
 
         ~DataPacketWrapper()

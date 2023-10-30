@@ -1,11 +1,12 @@
 ﻿using HPNSDataGenerator.util;
+using static HPNSDataGenerator.util.ByteHelper;
 
 namespace HPNSDataGenerator
 {
     [Serializable]
     public class AnalysisData
     {
-        public AnalysisData(bool isF6)
+        public AnalysisData(BinMode binMode)
         {
             var rnd = new Random();
 
@@ -13,9 +14,26 @@ namespace HPNSDataGenerator
             EndEntry = Convert.ToInt16(rnd.Next(0, 749));
 
             var lstData = new List<AnalysisTblV3>();
-            for(int i = 0; i < 750; i++)
-                lstData.Add(new AnalysisTblV3(isF6));
-
+            bool randomBool = false;
+            switch (binMode)
+            {
+                case BinMode.NoF6:
+                    for (int i = 0; i < 750; i++)
+                        lstData.Add(new AnalysisTblV3(false));
+                    break;
+                case BinMode.Mixed:
+                    for (int i = 0; i < 750; i++)
+                    {
+                        randomBool = rnd.Next(0, 2) > 0;
+                        lstData.Add(new AnalysisTblV3(randomBool));
+                    }
+                    break;
+                case BinMode.F6Only:
+                    for (int i = 0; i < 750; i++)
+                        lstData.Add(new AnalysisTblV3(true));
+                    break;
+            }
+            
             AnalysisTbl = lstData.ToArray();
         }
 
