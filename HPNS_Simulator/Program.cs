@@ -40,7 +40,7 @@ static async void Connect(String server, String message)
                 var bytes = data.GetBytes();
                 stream.Write(bytes, 0, bytes.Length);
                 data.Dispose();
-                Thread.Sleep(rnd.Next(2000, 10000));
+                Thread.Sleep(rnd.Next(1000, 2000));
 
                 Console.WriteLine("Pushed data packet. " + i.ToString());
             }

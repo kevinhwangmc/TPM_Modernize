@@ -22,7 +22,13 @@ namespace HPNSDataGenerator
             else
                 BIN = Convert.ToInt32(lstBin[rnd.Next(856)]);
 
-            RejectCode = lstRejectCode[rnd.Next(1421)];
+            var randomBool = rnd.Next(0, 2) > 0;
+
+            if (randomBool)
+                RejectCode = lstRejectCode[rnd.Next(1421)];
+            else
+                RejectCode = "";
+
             TransCode = lstTransCode[rnd.Next(17)];
             RespTime = Convert.ToInt16(rnd.Next(500));
             DateTime currentTime = DateTime.UtcNow;
